@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Roboto', 'sans-serif';
+
+    background-image: url("../src/assets/img/bg_portrait.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (orientation: landscape){
+        background-image: url("../src/assets/img/bg_landscape.jpg");
+    }
+}
+
+//  Header
+header {
+    height: 80px;
+
+    h1 {
+        max-width: 500px;
+        padding-top: 24px;
+        margin: auto;
+    }
+}
+
+.container {
+    max-width: 500px;
+    min-height: 300px;
+    padding: 30px;
+    margin:  30px auto;
+    overflow: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.form-control {
+    margin: 20px 0;
+}
+
+.form-control label {
+    display: block;
+}
+
+.form-control input {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 3px 7px;
+    font-size: 17px;
+}

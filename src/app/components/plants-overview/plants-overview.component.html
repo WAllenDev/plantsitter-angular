@@ -1,0 +1,12 @@
+<div>
+    <h2>{{title}}</h2>
+    <app-button
+        text="Add Plant"
+    ></app-button>
+</div>
+<div>
+    <app-plant
+        *ngFor="let plant of plants"
+        [plant]="plant"
+    ></app-plant>
+</div>

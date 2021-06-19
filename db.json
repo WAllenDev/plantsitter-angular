@@ -1,0 +1,37 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "name": "Bob",
+      "species": "Snake Plant",
+      "location": "Living Room",
+      "waterFrequency": 10,
+      "waterDates": [
+        1624046839204
+      ],
+      "photo": "url"
+    },
+    {
+      "id": 2,
+      "name": "Oz",
+      "species": "Japanese Juniper",
+      "location": "Front Step",
+      "waterFrequency": 10,
+      "waterDates": [
+        1624046839204
+      ],
+      "photo": "url"
+    },
+    {
+      "id": 3,
+      "name": "Gwen",
+      "species": "Maiden Fern",
+      "location": "Kitchen",
+      "waterFrequency": 10,
+      "waterDates": [
+        1624046839204
+      ],
+      "photo": "url"
+    }
+  ]
+}
