@@ -1,7 +1,9 @@
-<div>
+<div class="overview-header">
     <h2>{{title}}</h2>
+    <p>{{currentTime | date: 'EEEE MMM d'}}</p>
     <app-button
-        text="Add Plant"
+        text="{{ addText }}"
+        (btnClick)="onAddPlant()"
     ></app-button>
 </div>
 <div>

@@ -12,6 +12,8 @@
         <p>{{ plant.location }}</p>
     </div>
     <app-button
-        text="Water"
+        color="{{color}}"
+        text="{{text}}"
+        (btnClick)="waterNow(plant)"
     ></app-button>
 </div>

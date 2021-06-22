@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Plant } from 'src/app/Plant';
+
 
 @Component({
   selector: 'app-plant',
@@ -9,15 +10,17 @@ import { Plant } from 'src/app/Plant';
 export class PlantComponent implements OnInit {
 
   color: string = "green";
+  text: string = "Water"
   
   @Input() plant: Plant;
+  @Output() onWater: EventEmitter<Plant> = new EventEmitter;
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  waterNow() {
-    console.log("Watered");
+  waterNow(plant: Plant) {
+    this.onWater.emit(plant);
   }
 
 }

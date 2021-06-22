@@ -17,7 +17,9 @@ import { AddPlantComponent } from './components/add-plant/add-plant.component';
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'main', component: PlantsOverviewComponent}
+  {path: 'main', component: PlantsOverviewComponent},
+  {path: 'add', component: AddPlantComponent},
+  {path: 'details', component: PlantDetailsComponent}
 ]
 
 @NgModule({

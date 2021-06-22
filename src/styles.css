@@ -80,4 +80,11 @@ header h1 {
   font-size: 17px;
 }
 
+.overview-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 /*# sourceMappingURL=styles.css.map */

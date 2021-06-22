@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("login attempt");
     this.router.navigate(['/main']);
   }
 
