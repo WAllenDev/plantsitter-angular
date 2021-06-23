@@ -1,1 +1,23 @@
-<p>add-plant works!</p>
+<form class="add-form" (ngSubmit)="onSubmit">
+    <div class="form-control">
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name">
+    </div>
+    <div class="form-control">
+        <label for="species">Species</label>
+        <input type="text" name="species" [(ngModel)]="species" id="species" placeholder="Add Plant Species">
+    </div>
+    <div class="form-control">
+        <label for="location">Location</label>
+        <input type="text" name="location" [(ngModel)]="location" id="location" placeholder="Add Plant location">
+    </div>
+    <div class="form-control">
+        <label for="waterFrequency">Number of days between watering</label>
+        <input type="text" name="waterFrequency" [(ngModel)]="waterFrequency" id="waterFrequency" placeholder="0">
+    </div>
+    <div class="form-control">
+        <label for="species">Date Last Watered</label>
+        <input type="date" name="date" [(ngModel)]="date" id="date" placeholder="today">
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-block">
+</form>

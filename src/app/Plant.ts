@@ -5,5 +5,4 @@ export interface Plant {
     location: string;
     waterFrequency: number;
     waterDates: number[];
-    photo: string;
 }
