@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Plant } from '../Plant';
 
 const httpOptions = {
-  header: new HttpHeaders({
+  headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
 }
@@ -20,5 +20,9 @@ export class PlantService {
 
   getPlants(): Observable<Plant[]>{
     return this.http.get<Plant[]>(this.apiUrl);
+  }
+
+  addPlant(plant: Plant): Observable<Plant>{
+    return this.http.post<Plant>(this.apiUrl, plant, httpOptions);
   }
 }

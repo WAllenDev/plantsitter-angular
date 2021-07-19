@@ -9,6 +9,9 @@
 body {
     font-family: 'Noto Sans JP', 'Roboto', 'sans-serif';
 
+    min-height: 100vh;
+    position: sticky;
+
     background-image: url("../src/assets/img/bg_portrait.jpg");
     background-size: cover;
     background-repeat: no-repeat;

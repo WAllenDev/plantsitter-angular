@@ -32,6 +32,16 @@
         1624046839204
       ],
       "photo": "url"
+    },
+    {
+      "name": "Ziggy",
+      "species": "Basil",
+      "location": "Front Step",
+      "waterFrequency": "3",
+      "waterDates": [
+        1626566400000
+      ],
+      "id": 4
     }
   ]
 }

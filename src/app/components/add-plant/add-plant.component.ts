@@ -1,4 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { PlantService } from 'src/app/services/plant.service';
+import { Subscription } from 'rxjs';
 import { Plant } from '../../Plant'
 
 @Component({
@@ -8,7 +11,7 @@ import { Plant } from '../../Plant'
 })
 export class AddPlantComponent implements OnInit {
 
-  @Output() onAddPlant: EventEmitter<Plant> = new EventEmitter();
+  plants: Plant[] = [];
 
   name: string;
   species: string;
@@ -16,25 +19,33 @@ export class AddPlantComponent implements OnInit {
   waterFrequency: number;
   waterDates: number[];
   date: Date;
+  newDate: number;
+  subscription: Subscription;
+  newWaterDates: number[];
 
-  constructor() { }
+  constructor( private plantService: PlantService, private router: Router ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
 
-    const newPlant = {
+    this.newDate = new Date(this.date).getTime();
+    this.waterDates = [this.newDate];
+
+    console.log(this.waterDates);
+    console.log(typeof this.waterDates);
+
+     const newPlant = {
       name: this.name,
       species: this.species,
       location: this.location,
       waterFrequency: this.waterFrequency,
       waterDates: this.waterDates,
-      date: this.date
     }
 
-    this.onAddPlant.emit(newPlant);
+    this.plantService.addPlant(newPlant).subscribe((newPlant) =>(this.plants.push(newPlant)));
 
+    this.router.navigate(['/main']);
   }
 
 }
